@@ -25,13 +25,3 @@ jobs:
         run: |
           cd /opt/ai-review
           python3 main.py             --pr-number ${{ github.event.pull_request.number }}             --repo ${{ github.repository }}
-
-      - name: Cost report
-        if: always()
-        run: |
-          cd /opt/ai-review
-          python3 main.py --pr-number 0 --repo x/x --report 2>/dev/null || python3 -c "
-          import sys; sys.path.insert(0,"."); 
-          from cost_tracker import print_cost_report; 
-          print_cost_report()
-          "
