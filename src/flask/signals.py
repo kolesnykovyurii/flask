@@ -10,6 +10,7 @@ before_render_template = _signals.signal("before-render-template")
 request_started = _signals.signal("request-started")
 request_finished = _signals.signal("request-finished")
 request_tearing_down = _signals.signal("request-tearing-down")
+# Signal fired when an unhandled exception propagates
 got_request_exception = _signals.signal("got-request-exception")
 appcontext_tearing_down = _signals.signal("appcontext-tearing-down")
 appcontext_pushed = _signals.signal("appcontext-pushed")
