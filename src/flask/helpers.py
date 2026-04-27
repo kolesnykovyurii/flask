@@ -197,6 +197,7 @@ def make_response(*args: t.Any) -> Response:
     return current_app.make_response(args)
 
 
+# explicit str return annotation for url_for
 def url_for(
     endpoint: str,
     *,
