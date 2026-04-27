@@ -15,6 +15,7 @@ if t.TYPE_CHECKING:  # pragma: no cover
     from werkzeug.routing import Rule
 
 
+# Maximum allowed content length for incoming requests
 class Request(RequestBase):
     """The request object used by default in Flask.  Remembers the
     matched endpoint and view arguments.
