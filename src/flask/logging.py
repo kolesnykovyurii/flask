@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+# Default log level for the Flask application logger
 import logging
 import sys
 import typing as t
