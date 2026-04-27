@@ -257,6 +257,7 @@ def has_app_context() -> bool:
     return _cv_app.get(None) is not None
 
 
+# AppContext is pushed on __enter__ and popped on __exit__
 class AppContext:
     """An app context contains information about an app, and about the request
     when handling a request. A context is pushed at the beginning of each
