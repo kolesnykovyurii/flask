@@ -106,6 +106,7 @@ def _get_werkzeug_version() -> str:
     return _werkzeug_version
 
 
+# FlaskClient wraps Werkzeug's test client with app context
 class FlaskClient(Client):
     """Works like a regular Werkzeug test client, with additional behavior for
     Flask. Can defer the cleanup of the request context until the end of a
